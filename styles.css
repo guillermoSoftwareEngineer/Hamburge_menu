@@ -15,6 +15,11 @@ p{
     max-width: 80%;
 }
 
+li{
+    align-self: center;
+    /* para alinear centrados todos los li usados en todo el proyecto */
+}
+
 .image-logo {
     border-radius: 50%;
     max-width: 30%;
@@ -108,7 +113,7 @@ p{
 
 /* inicio clases de menu hamburguesa 2 */
 
-/* Estilos básicos */
+/* Estilos básicos menu 2 */
 .header-basic-2 {
     display: flex;
     align-items: center;
@@ -176,12 +181,12 @@ p{
     }
   
     .image-logo-2 {
-      display: block; /* Mostrar logo */
-      margin: 0; /* Sin margen adicional */
+      display: block; 
+      margin: 0; 
     }
   
     .nav-basic-2 {
-      display: flex; /* Mostrar siempre menú */
+      display: flex; 
       align-items: center;
       background: none;
       padding: 0;
@@ -209,52 +214,330 @@ p{
    }
   
 
-/* inicio clases de menu hamburguesa 2 */
+/* final clases de menu hamburguesa 2 */
 
 /* inicio clases de menu hamburguesa 3 */
 
+/* General menu 3 */
+.header-modern {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #34495e;
+    color: #ecf0f1;
+    position: relative;
+    z-index: 100;
+  }
+  
+  .logo-modern {
+    border-radius: 50%;
+    max-width: 50px;
+    cursor: pointer;
+  }
+  
+  /* Menú desplegable en pantallas de emnos de 425 px menu 3 */
+  .menu-toggle-modern {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .menu-toggle-modern span {
+    width: 30px;
+    height: 3px;
+    background-color: #ecf0f1;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-modern {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2c3e50;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 15px 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-modern.active {
+    display: flex;
+    transform: translateY(0);
+  }
+  
+  .nav-modern ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .nav-modern ul li {
+    border-bottom: 1px solid #34495e;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-modern ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-modern ul li a:hover {
+    color: #1abc9c;
+  }
+  
+  /* clases animadas para nimacion izquierda del icono de despliegue hamburguesa menu 3 */
+  .menu-toggle-modern.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  
+  .menu-toggle-modern.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle-modern.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+  
+  /* Estilos para pantallas mayores a 425px  para menu 3*/
+  @media screen and (min-width: 426px) {
+    .menu-toggle-modern {
+      display: none; 
+    }
+  
+    .nav-modern {
+      display: flex !important; 
+      flex-direction: row;
+      justify-content: center;
+      background-color: transparent;
+      position: static;
+      box-shadow: none;
+      transform: translateY(0);
+      padding: 0;max-width: 50%;
+    }
+  
+    .nav-modern ul {
+      flex-direction: row; 
+      gap: 15px;
+    }
+  
+    .nav-modern ul li {
+      border: none; 
+    }
+  
+    .nav-modern ul li a {
+      padding: 5px 15px;
+      color: #ecf0f1;
+      font-weight: bold;
+    }
+  
+    .nav-modern ul li a:hover {
+      color: #1abc9c;
+    }
+  
+    .logo-modern {
+      margin: auto;
+      max-width: 10%; 
+    }
+  }
+  
+  /* clases para mayores a 1024 menu 3 */
 
+  @media screen and (min-width: 1024px){
+    .nav-modern ul li a{
+        font-size: larger;
+    }
+  }
 
-/* inicio clases de menu hamburguesa 3 */
+/* final clases de menu hamburguesa 3 */
 
 /* inicio clases de menu hamburguesa 4 */
 
+/* Contenedor para aislar el menú 4 */
+.menu-container-4 {
+    width: 100%; 
+    /* se debio establecer un aislador, ya que el menu que se exapnde 
+    desde la derecha afecta todo el viewport */
+}
+
+/* Header del menú 4 */
+.menu-container-4 .header-modern-4 {
+    position: relative;
+    max-width: 95%;
+    align-self: center;
+    padding: 10px;
+    background-color: var(--primary, #6A0572); 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+}
+
+/* Botón del menú hamburguesa 4 que expnde el slider */
+.menu-container-4 .menu-toggle-modern-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-container-4 .menu-toggle-modern-4 span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-light, #FFFFFF);
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animaciones para el menú activo del slider para manipuilar el DOM desde JS */
+.menu-container-4 .menu-toggle-modern-4.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-container-4 .menu-toggle-modern-4.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-container-4 .menu-toggle-modern-4.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Navegación del menu 4 */
+.menu-container-4 .nav-modern-4 {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Oculta por defecto el menu*/
+    width: 60%;
+    height: 100%;
+    background-color: var(--secondary, #F4A261);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.5s ease-in-out;
+    z-index: 999; /* Asegura que esté al frente de todos los demas menus */
+}
+
+.menu-container-4 .nav-modern-4 img {
+    max-width: 30%;
+    margin-top: 20%;
+    position: absolute; 
+    top: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    border: 3px solid red; 
+    border-radius: 50%; 
+    padding: 5px; 
+    background-color: var(--background, #F4A261); 
+    z-index: 1000; 
+    
+}
+
+/* Botón x para cerrar el menú */
+.menu-container-4 .close-menu-4 {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--hover, #E76F51);
+    color: var(--text-light, #FFFFFF);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+.menu-container-4 .close-menu-4:hover {
+    background-color: var(--background, #264653);
+    color: var(--hover, #E76F51);
+}
 
 
-/* inicio clases de menu hamburguesa 4 */
+.menu-container-4 .nav-modern-4.active {
+    right: 0; /* Aparece desde la derecha */
+}
+
+.menu-container-4 .nav-modern-4 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-container-4 .nav-modern-4 ul li a {
+    color: var(--text-light, #FFFFFF);
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: 2px solid var(--text-light, #FFFFFF);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-container-4 .nav-modern-4 ul li a:hover {
+    background-color: var(--hover, #E76F51);
+    color: var(--background, #264653);
+}
+
+/* Estilos para pantallas mayores a 425px menu 4 */
+@media screen and (min-width: 426px) {
+    .menu-container-4 .menu-toggle-modern-4 {
+        display: none; /* Oculta el menú hamburguesa en tamaños grandes */
+    }
+
+    .close-menu-4{
+        display: none;
+    }
+
+    .menu-container-4 .nav-modern-4 .logo-modern-4 {
+        max-width: 8% ; /* Fuerza la prioridad */
+        max-height: 55%;
+        margin-top: 0 ; /* Asegura que esta regla sobrescriba cualquier otra */
+        left: 20%;
+    }
+
+    .menu-container-4 .nav-modern-4 {
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        background-color: transparent;
+        justify-content: center;
+    }
+
+    .menu-container-4 .nav-modern-4 ul {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .menu-container-4 .nav-modern-4 ul li a {
+        border: none;
+        font-size: 1rem;
+    }
+}
+
+
+/* final clases de menu hamburguesa 4 */
+
+/* final clases de menu hamburguesa 5 */
+
+
 
 /* inicio clases de menu hamburguesa 5 */
 
 
-
-/* inicio clases de menu hamburguesa 5 */
-
-/* inicio clases de menu hamburguesa 6 */
-
-
-
-/* inicio clases de menu hamburguesa 6 */
-
-/* inicio clases de menu hamburguesa 7 */
-
-
-
-/* inicio clases de menu hamburguesa 7 */
-
-/* inicio clases de menu hamburguesa 8 */
-
-
-
-/* inicio clases de menu hamburguesa 8 */
-
-/* inicio clases de menu hamburguesa 9 */
-
-
-
-/* inicio clases de menu hamburguesa 9 */
-
-/* inicio clases de menu hamburguesa 10 */
-
-
-
-/* inicio clases de menu hamburguesa 10 */
