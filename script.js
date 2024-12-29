@@ -28,11 +28,10 @@ toggle.addEventListener("click", () => {
 });
 
 
-/* inicio logica de menu 3 */
+/* final logica de menu 3 */
 
 /* inicio logica de menu 4 */
 
-// Selecciona el menú y el icono
 
 // Seleccionar elementos del menú 4
 const menuToggle4 = document.querySelector(".menu-container-4 .menu-toggle-modern-4");
@@ -57,36 +56,15 @@ closeButton4.addEventListener("click", () => {
 
 /* inicio logica de menu 5 */
 
+// Selección de elementos para el menú 5
+const menuToggle5 = document.querySelector(".menu-toggle-modern-5");
+const nav5 = document.querySelector(".nav-modern-5");
 
+// Evento para alternar el menú desplegable
+menuToggle5.addEventListener("click", () => {
+    menuToggle5.classList.toggle("active");
+    nav5.classList.toggle("active");
+});
 
-/* inicio logica de menu 5 */
+/* final logica de menu 5 */
 
-/* inicio logica de menu 6 */
-
-
-
-/* inicio logica de menu 6 */
-
-/* inicio logica de menu 7 */
-
-
-
-/* inicio logica de menu 7 */
-
-/* inicio logica de menu 8 */
-
-
-
-/* inicio logica de menu 8 */
-
-/* inicio logica de menu 9 */
-
-
-
-/* inicio logica de menu 9 */
-
-/* inicio logica de menu 10 */
-
-
-
-/* inicio logica de menu 10 */

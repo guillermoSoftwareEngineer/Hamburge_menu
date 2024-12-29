@@ -373,12 +373,12 @@ li{
 /* Header del menú 4 */
 .menu-container-4 .header-modern-4 {
     position: relative;
-    max-width: 95%;
+    max-width: 100%;
     align-self: center;
     padding: 10px;
     background-color: var(--primary, #6A0572); 
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     height: 60px;
 }
@@ -505,9 +505,9 @@ li{
     }
 
     .menu-container-4 .nav-modern-4 .logo-modern-4 {
-        max-width: 8% ; /* Fuerza la prioridad */
+        max-width: 8% ; 
         max-height: 55%;
-        margin-top: 0 ; /* Asegura que esta regla sobrescriba cualquier otra */
+        margin-top: 0 ; 
         left: 20%;
     }
 
@@ -531,13 +531,166 @@ li{
     }
 }
 
+@media screen and (min-width: 768px) {
+    .menu-container-4 .nav-modern-4 .logo-modern-4{
+        left: 10%;
+    }
+}
 
 /* final clases de menu hamburguesa 4 */
 
 /* final clases de menu hamburguesa 5 */
 
 
+/* Contenedor principal del menú 5 */
+.menu-container-5 {
+    width: 100%;
+    background-color: #1A202C; 
+    position: relative;
+}
 
-/* inicio clases de menu hamburguesa 5 */
+/* Header del menú 5 */
+.header-modern-5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #6B46C1, #B794F4); /* Degradado morado */
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo del menú 5 */
+.logo-modern-5 {
+    border-radius: 50%;
+    max-width: 60px;
+    cursor: pointer;
+    animation: spin 120s linear infinite; /* Efecto giratorio */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Botón del menú hamburguesa */
+.menu-toggle-modern-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-toggle-modern-5 span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animación del menú activo */
+.menu-toggle-modern-5.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    background-color: #FFD700; 
+}
+
+.menu-toggle-modern-5.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle-modern-5.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    background-color: #FFD700;
+}
+
+/* Navegación del menú */
+.nav-modern-5 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: #2D3748; 
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 20px 0;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    border-top: 2px solid #6B46C1; 
+}
+
+.nav-modern-5.active {
+    display: flex;
+    transform: translateY(0);
+}
+
+.nav-modern-5 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-modern-5 ul li {
+    margin: 10px 0;
+}
+
+.nav-modern-5 ul li a {
+    color: #E2E8F0; 
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-modern-5 ul li a:hover {
+    color: #9F7AEA; 
+    transform: scale(1.1); /
+}
+
+/* Media queries para pantallas mayores a 425px menu 5 */
+@media screen and (min-width: 426px) {
+    .menu-toggle-modern-5 {
+        display: none; /* Ocultar botón hamburguesa */
+    }
+
+    .nav-modern-5 {
+        display: flex !important; /* Mostrar menú siempre */
+        flex-direction: row;
+        justify-content: center;
+        background: transparent;
+        position: static;
+        transform: translateY(0);
+        padding: 0;
+        box-shadow: none;
+        border-top: none;
+    }
+
+    .nav-modern-5 ul {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .nav-modern-5 ul li {
+        margin: 0;
+    }
+
+    .nav-modern-5 ul li a {
+        font-size: 1rem;
+    }
+}
+
+/* final clases de menu hamburguesa 5 */
+
 
 
