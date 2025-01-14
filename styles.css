@@ -1,8 +1,10 @@
 .title {
     text-align: center;
-    color: #333;
-    font-size: large;
+    color: #1abc9c;
+    font-size: xx-large;
 }
+
+
 
 h2{
     color: #333;
@@ -20,18 +22,30 @@ li{
     /* para alinear centrados todos los li usados en todo el proyecto */
 }
 
-.info{
+.info {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: nowrap; 
   max-width: 100%;
+  
 }
 
-.info-img{
+.info-img {
+  align-self: center;
+  border-radius: 5%;
+  margin-top: 3%;
   max-width: 90%;
-   border-radius: 5%;
 }
+
+.info-video{
+  align-self: center;
+  border-radius: 5%;
+  margin-top: 3%;
+  width: 100%;
+}
+
 
 .image-logo {
     border-radius: 50%;
@@ -552,6 +566,11 @@ li{
     .menu-container-4 .nav-modern-4 .logo-modern-4{
         left: 10%;
     }
+    .info-video{
+      width: 80%;
+    }
+    
+
 }
 
 /* final clases de menu hamburguesa 4 */
